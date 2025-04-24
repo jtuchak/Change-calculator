@@ -1,13 +1,49 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Change Calculator</title>
-  </head>
-  <body>
-    <!-- Write your markup here -->
+<html lang="en">
 
-    <!-- Don't forget to add your <script> tag here -->
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Change Calculator</title>
+</head>
 
-  </body>
+<body>
+  <div class="container">
+    <h1>Change Calculator</h1>
+
+    <label for="amount-due">Sale Amount ($):</label>
+    <input type="number" id="amount-due" step="0.01" min="0">
+
+    <label for="amount-received">Amount Tendered ($):</label>
+    <input type="number" id="amount-received" step="0.01" min="0">
+    
+    <!--<audio id="audio" src="cha-ching-7053.mp3" autostart="false"></audio> -->
+    <button id="calculate-change" onclick="chaChing();">Calculate Change</button>
+    
+
+<div class="option">
+  <input type="checkbox" id="use-2-dollar" checked>
+  <label for="use-2-dollar">Use $2 bills in result</label>
+</div>
+    <!--<script>
+      function chaChing() {
+        var sound = document.getElementById('audio');
+        sound.play();
+      }
+    </script> -->
+
+    <div class="result" id="change-output"> 
+    <p id="total-output"></p>
+    <p id="dollars-output"></p>
+    <p id="quarters-output"></p>
+    <p id="dimes-output"></p>
+    <p id="nickels-output"></p>
+    <p id="pennies-output"></p>
+    </div> 
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+
 </html>

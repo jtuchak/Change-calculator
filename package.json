@@ -10,11 +10,11 @@
         "test": "mocha --exit"
     },
     "devDependencies": {
-        "axios": "^0.16.2",
+        "axios": "^1.8.4",
         "chai": "^4.0.2",
         "express": "^4.15.3",
-        "mocha": "^5.2.0",
-        "nightmare": "^3.0.1",
+        "mocha": "^11.1.0",
+        "nightmare": "^2.0.9",
         "node-static": "^0.7.9"
     }
 }
