@@ -12,7 +12,7 @@ function calculateChange() {
     return;
   }
 
-  // Convert the change to cents and round to avoid floating point issues
+  // Convert the change to cents and round to avoid floating point issues.
   let change = Math.round((amountReceived - saleAmount) * 100);
 
   // Store total change in dollars for display
