@@ -5,43 +5,54 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
   <title>Change Calculator</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-  <div class="container">
-    <h1>Change Calculator</h1>
+  <div class="container"> <!-- Main content container for layout and styling -->
+    <h1>Change Calculator</h1> <!-- Page header/title -->
 
+    <!-- Label and input for the sale amount -->
     <label for="amount-due">Sale Amount ($):</label>
-    <input type="number" id="amount-due" step="0.01" min="0">
+    <input type="number" id="amount-due" step="0.01" min="0"> <!-- User inputs the amount due -->
 
+    <!-- Label and input for the amount received -->
     <label for="amount-received">Amount Tendered ($):</label>
-    <input type="number" id="amount-received" step="0.01" min="0">
-    
-    <!--<audio id="audio" src="cha-ching-7053.mp3" autostart="false"></audio> -->
-    <button id="calculate-change" onclick="chaChing();">Calculate Change</button>
-    
+    <input type="number" id="amount-received" step="0.01" min="0"> <!-- User inputs the amount received -->
 
-<div class="option">
-  <input type="checkbox" id="use-2-dollar" checked>
-  <label for="use-2-dollar">Use $2 bills in result</label>
-</div>
-    <!--<script>
+    <!-- Audio element for a cash register sound when calculating change -->
+    <audio id="audio" src="cha-ching-7053.mp3" autostart="false"></audio>
+
+    <!-- Button to trigger the change calculation and play sound -->
+    <button id="calculate-change" onclick="chaChing();">Calculate Change</button>
+
+    <!-- Option to include or exclude $2 bills in the calculation -->
+    <div class="option">
+      <input type="checkbox" id="use-2-dollar" checked> <!-- Checkbox defaults to checked -->
+      <label for="use-2-dollar">Use $2 bills in result</label>
+    </div>
+
+    <!-- Script to play the audio when the button is clicked -->
+    <script>
       function chaChing() {
         var sound = document.getElementById('audio');
-        sound.play();
+        sound.play(); // Plays the cha-ching sound effect
       }
-    </script> -->
+    </script>
 
+    <!-- Area where calculated change results are displayed -->
     <div class="result" id="change-output"> 
-    <p id="total-output"></p>
-    <p id="dollars-output"></p>
-    <p id="quarters-output"></p>
-    <p id="dimes-output"></p>
-    <p id="nickels-output"></p>
-    <p id="pennies-output"></p>
+      <!-- These <p> tags will be updated with JavaScript to show each coin/bill count -->
+      <p id="total-output"></p> <!-- (Optional) total output placeholder -->
+      <p id="dollars-output"></p> <!-- $1 bills -->
+      <p id="quarters-output"></p> <!-- Quarters -->
+      <p id="dimes-output"></p> <!-- Dimes -->
+      <p id="nickels-output"></p> <!-- Nickels -->
+      <p id="pennies-output"></p> <!-- Pennies -->
     </div> 
   </div>
 
+  <!-- Link to the JavaScript file that handles calculation logic -->
   <script src="main.js"></script>
 
 </body>
